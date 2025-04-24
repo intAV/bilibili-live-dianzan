@@ -32,7 +32,7 @@ def like():
     url = "https://api.live.bilibili.com/xlive/app-ucenter/v1/like_info_v3/like/likeReportV3"
 
     wts = str(round(time.time()))
-    arg1 = {
+    params = {
         "click_time": 1000,
         "room_id": roomid,
         "uid": uid,
@@ -42,18 +42,9 @@ def like():
         "wts": wts,
     }
 
-    w_rid_str = get_w_rid(arg1,wts)
+    w_rid_str = get_w_rid(params,wts)
 
-    params = {
-        "click_time": 1000,
-        "room_id": roomid,
-        "uid": uid,
-        "anchor_id": anchor_id,
-        "web_location": "444.8",
-        "csrf": csrf,
-        "w_rid": w_rid_str.get("w_rid"),
-        "wts": w_rid_str.get("wts"),
-    }
+    params["w_rid"] = w_rid_str.get("w_rid")
     # print(params)
     response = requests.post(url=url, headers=headers, params=params)
 
