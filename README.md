@@ -1,4 +1,7 @@
 ![](https://komarev.com/ghpvc/?username=intAV-bilibili-live-dianzan&style=pixel)
+#### 需要环境
+#### 1.nodejs
+#### 2.pip show PyExecJS
 # bilibili-live-dianzan
 哔哩哔哩直播间点赞 python版
 
