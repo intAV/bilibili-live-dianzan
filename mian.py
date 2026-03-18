@@ -46,7 +46,7 @@ def like():
     w_rid_str = get_w_rid(params,wts)
 
     params["w_rid"] = w_rid_str.get("w_rid")
-    print(f"anchor_id:{anchor_id},user_id:{user_id},csrf:{csrf},w_rid_str:{w_rid_str.get("w_rid")}")
+    print(f"anchor_id:{anchor_id},user_id:{user_id},csrf:{csrf},w_rid_str:{w_rid_str.get('w_rid')}")
 
     response = requests.post(url=url, headers=headers, params=params,timeout=5)
     print(response.text)
